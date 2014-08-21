@@ -13,6 +13,10 @@
 #include "unix.h"
 #include <sys/un.h> 
 
+#ifndef LUASOCKET_API
+#define LUASOCKET_API extern
+#endif
+
 /*
 Reuses userdata definition from unix.h, since it is useful for all
 stream-like objects.
